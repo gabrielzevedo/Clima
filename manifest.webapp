@@ -1,0 +1,21 @@
+{
+    "version":"1.2",
+  "name": "Clima",
+    "description": "Um aplicativo bonito para ver a previsao do tempo.",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/img/app-icon.png"
+    },
+	"developer": {
+        "name": "Gabriel Azevedo",
+        "url": "http://gabrielzevedo.com"
+    },
+    "default_locale": "pt-br",
+	"permissions": {
+        "geolocation": {
+            "description" : "Used to locate me"
+        }
+	
+
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Weather</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"; />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/weather.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/conditions.css" type="text/css" media="all" />
+	<script type="text/javascript" src="js/jQuery.js" charset="utf-8"></script>
+  
+  <script>
+        $(document).ready(function() {
+
+          
+            
+      $(window).scroll(function () {
+var scrollTop = (($(document).scrollTop())/100);
+
+          
+  if(scrollTop < 1)
+    {opacity = 1-Math.floor(scrollTop)/100;}
+    else
+    {opacity = 0.6;}
+          
+          $("#fundo").css("opacity", opacity); 
+          
+         /*    $("#fundo").fadeTo( "fast", opacity ); */
+
+
+          
+       /*   document.getElementById('fundo').innerHTML='<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">'+
+              '<defs>'+
+              '<filter id=\"blurnofundo\" x=\"0\" y=\"0\">'+
+      '<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"'+scrollTopFirefox+'\" />'+
+    '</filter>'+
+  '</defs>'+
+'</svg>'; */
+          
+});
+          });
+
+      
+      
+      </script>
+    </head>
+  <body>
+	<div id="ContentArea" style="position: absolute;
+z-index: 2;"></div>
+      <div id="sombra"></div>
+    <div id="sombra-topo"></div>
+
+      <div id="fundo"></div>
+
+  	<div id="panel" class="panel">
+	  	
+  		<!-- ############## FRONT ############## -->
+	  	<div class="front">
+	  		<div class="inner">
+		  		<div id="displayWeather"></div>
+		  		<a href="#" class="settingsBtn" id="settingsBtn"><img src="img/configs.png"></a>
+		  	</div>
+	  	</div>
+
+	  	<!-- ############## BACK ############## -->
+	  	<div id="settings" class="back">
+	  		<div class="inner">
+	  			<h1 class="forecast_location" id="config-title">Configurações</h1>
+	  			<div id="showCurrentLocation"></div>
+	  			<div class="wrap-atras">
+                    <div id="ContentArea"></div>
+                <div class="title-config">Local:</div>
+                    <p>
+                        <div class="temp-btns">
+	  				<input type="text" id="newLocation" placeholder="Digite a localização aqui" />
+                            <a href="" id="clearBtn">x</>
+					<a href="" id="submitLocation" class="mainBtn">Ok</a><a href="" id="clearLoc" class="mainBtn"><img src="img/gps.png"></a>
+				</div>
+                    </p>
+                
+				 <div class="title-config">Temperatura:</div>
+
+                    <p>
+					<div class="temp-btns">
+						<a id="showTempF" value="&#176;F" class="f showTemp">&#176;F</a>
+						<a id="showTempC" value="&#176;C" class="c showTemp">&#176;C</a>
+					</div>
+				</p>
+				<div id="favourites">
+
+				</div>
+				 <div class="title-config">Sobre:</div>
+
+				<div class="about">
+					<p>
+                       <div id="icon"></div>
+                    </p>
+                    <p>
+                        Clima - Versão 1.1
+                    </p>
+                    <p>
+						Desenvolvido por <a href="http://twitter.com/gabrielzevedo">Gabriel Azevedo</a>
+					</p>
+									</div>
+                </div>
+				<a href="#" id="backBtn" class="backBtn"><img src="img/configs.png"></a>
+			</div>
+	  	</div>
+
+	</div>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	<script type="text/javascript" src="js/weather.js"></script>
+	<!-- <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-873989-4']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script> -->
+  </body>
+ </html>
+
+
+
