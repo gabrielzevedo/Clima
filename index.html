@@ -6,50 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/weather.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/conditions.css" type="text/css" media="all" />
-	<script type="text/javascript" src="js/jQuery.js" charset="utf-8"></script>
-  
-  <script>
-        $(document).ready(function() {
+   </head>
 
-          
-            
-      $(window).scroll(function () {
-var scrollTop = (($(document).scrollTop())/100);
-
-          
-  if(scrollTop < 1)
-    {opacity = 1-Math.floor(scrollTop)/100;}
-    else
-    {opacity = 0.6;}
-          
-          $("#fundo").css("opacity", opacity); 
-          
-         /*    $("#fundo").fadeTo( "fast", opacity ); */
-
-
-          
-       /*   document.getElementById('fundo').innerHTML='<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">'+
-              '<defs>'+
-              '<filter id=\"blurnofundo\" x=\"0\" y=\"0\">'+
-      '<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"'+scrollTopFirefox+'\" />'+
-    '</filter>'+
-  '</defs>'+
-'</svg>'; */
-          
-});
-          });
-
-      
-      
-      </script>
-    </head>
   <body>
-	<div id="ContentArea" style="position: absolute;
-z-index: 2;"></div>
+	<div id="ContentArea" style="position: absolute; z-index: 2;"></div>
       <div id="sombra"></div>
     <div id="sombra-topo"></div>
 
-      <div id="fundo"></div>
+    <div id="fundo"></div>
 
   	<div id="panel" class="panel">
 	  	
@@ -72,9 +36,9 @@ z-index: 2;"></div>
                     <p>
                         <div class="temp-btns">
 	  				<input type="text" id="newLocation" placeholder="Digite a localização aqui" />
-                            <a href="" id="clearBtn">x</>
+	  				<a href="" id="clearBtn">x </a>
 					<a href="" id="submitLocation" class="mainBtn">Ok</a><a href="" id="clearLoc" class="mainBtn"><img src="img/gps.png"></a>
-				</div>
+						</div>
                     </p>
                 
 				 <div class="title-config">Temperatura:</div>
@@ -98,7 +62,7 @@ z-index: 2;"></div>
                         Clima - Versão 1.1
                     </p>
                     <p>
-						Desenvolvido por <a href="http://twitter.com/gabrielzevedo">Gabriel Azevedo</a>
+						Desenvolvido por <a href="http://twitter.com/gabrielzevedo" target="_blank">Gabriel Azevedo</a>
 					</p>
 									</div>
                 </div>
@@ -108,6 +72,7 @@ z-index: 2;"></div>
 
 	</div>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	<script type="text/javascript" src="js/jQuery.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/weather.js"></script>
 	<!-- <script type="text/javascript">
 
@@ -122,6 +87,40 @@ z-index: 2;"></div>
 	  })();
 
 	</script> -->
+
+  
+  	<script>
+        $(document).ready(function() {
+
+          
+            
+      	$(window).scroll(function () {
+			var scrollTop = (($(document).scrollTop())/100);
+
+          
+	  		if(scrollTop < 1)
+	    		{opacity = 1-Math.floor(scrollTop)/100;}
+	    	else
+	    	{opacity = 0.6;}
+	          
+	          $("#fundo").css("opacity", opacity); 
+	          
+	         /*    $("#fundo").fadeTo( "fast", opacity ); */
+
+
+	          
+		       /*   document.getElementById('fundo').innerHTML='<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">'+
+		              '<defs>'+
+		              '<filter id=\"blurnofundo\" x=\"0\" y=\"0\">'+
+				      '<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"'+scrollTopFirefox+'\" />'+
+				    '</filter>'+
+				  '</defs>'+
+				'</svg>'; */
+		          
+			});
+        });
+
+      </script>
   </body>
  </html>
 
